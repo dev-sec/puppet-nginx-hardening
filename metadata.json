@@ -1,0 +1,19 @@
+{
+  "name": "hardening/nginx_hardening",
+  "version": "1.0.1",
+  "author": "Dominik Richter",
+  "summary": "Configures Nginx for security hardening",
+  "license": "Apache License, Version 2.0",
+  "source": "https://github.com/TelekomLabs/puppet-nginx-hardening",
+  "project_page": "https://github.com/TelekomLabs/puppet-nginx-hardening",
+  "issues_url": "https://github.com/TelekomLabs/puppet-nginx-hardening/issues",
+  "description": "Configures Nginx for security hardening",
+  "types": [
+
+  ],
+  "dependencies": [
+    {
+      "name": "jfryman/nginx"
+    }
+  ]
+}

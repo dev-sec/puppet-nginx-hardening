@@ -1,0 +1,3 @@
+fixtures:
+  repositories:
+    nginx: https://github.com/jfryman/puppet-nginx.git
