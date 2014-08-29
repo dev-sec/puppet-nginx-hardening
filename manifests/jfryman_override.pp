@@ -17,6 +17,8 @@ class nginx_hardening::jfryman_override inherits ::nginx::config {
   
   $server_tokens = 'off'
 
+  $keepalive_timeout = '5 5'
+
   File["${conf_dir}/nginx.conf"]{
     content => template($conf_template)
   }

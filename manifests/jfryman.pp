@@ -14,23 +14,34 @@
 # none
 #
 class nginx_hardening::jfryman(
-  $conf_dir = $nginx::params::nx_conf_dir
+  $conf_dir = $nginx::params::nx_conf_dir,
+  $package_source = $nginx::params::package_source
 ) {
+  # try to configure advanced options, if possible
+  if $package_source != 'nginx' and $package_source != 'passenger' {
+    # install required package
+    package { 'nginx-extras':
+      ensure => installed,
+      alias  => 'nginx-extras'
+    }
+
+    # configure options
+    $more_clear_headers = [
+      '\'Server\'',
+      '\'X-Powered-By\''
+    ]
+  } else {
+    $more_clear_headers = []
+  }
+
   # finally we need to make sure our options are written to the config file
   class{'nginx_hardening::jfryman_override': }
 
   # additional configuration
-  
-  $keepalive_timeout = '5 5'
 
   $client_body_buffer_size = '1k'
 
   $client_max_body_size = '1k'
-
-  $more_clear_headers = [
-    '\'Server\'',
-    '\'X-Powered-By\''
-  ]
 
   $client_header_buffer_size = '1k'
 
