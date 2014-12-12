@@ -1,6 +1,9 @@
+# encoding: utf-8
+
 source 'https://rubygems.org'
 
-if puppetversion = ENV['PUPPET_VERSION']
+puppetversion = ENV['PUPPET_VERSION']
+if puppetversion
   gem 'puppet', puppetversion, :require => false
 else
   gem 'puppet', :require => false
