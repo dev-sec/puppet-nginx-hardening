@@ -1,4 +1,4 @@
-name    'hardening/nginx_hardening'
+name    'hardening-nginx_hardening'
 version '1.0.1'
 source 'https://github.com/TelekomLabs/puppet-nginx-hardening'
 author 'Dominik Richter'
