@@ -19,7 +19,11 @@ class nginx_hardening::jfryman_override inherits ::nginx::config {
 
   $keepalive_timeout = '5 5'
 
-  File["${conf_dir}/nginx.conf"]{
-    content => template($conf_template)
+  $client_body_buffer_size = '1k'
+
+  $client_max_body_size = '1k'
+
+  File["${::nginx::config::conf_dir}/nginx.conf"]{
+    content => template($::nginx::config::conf_template),
   }
 }
