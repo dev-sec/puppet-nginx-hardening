@@ -25,5 +25,6 @@ class nginx_hardening::jfryman_override inherits ::nginx::config {
 
   File["${::nginx::config::conf_dir}/nginx.conf"]{
     content => template($::nginx::config::conf_template),
+    mode   => '0600',
   }
 }
