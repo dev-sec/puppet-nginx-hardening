@@ -1,5 +1,5 @@
 {
-  "name": "hardening/nginx_hardening",
+  "name": "hardening-nginx_hardening",
   "version": "1.0.1",
   "author": "Dominik Richter",
   "summary": "Configures Nginx for security hardening",
