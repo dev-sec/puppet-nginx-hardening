@@ -64,7 +64,7 @@ class nginx_hardening::jfryman(
   ]
 
   # addhardening parameters
-  file { '/etc/nginx/conf.d/90.hardening.conf':
+  file { "${::nginx::config::conf_dir}/conf.d/90.hardening.conf":
     ensure  => file,
     content => template('nginx_hardening/hardening.conf.erb'),
   }
