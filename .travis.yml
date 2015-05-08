@@ -5,10 +5,10 @@ rvm:
 language: ruby
 bundler_args: --without development integration openstack
 env:
+  - PUPPET_VERSION="~> 4.0.0"
+  - PUPPET_VERSION="~> 3.7.5"
+  - PUPPET_VERSION="~> 3.6.2"
   - PUPPET_VERSION="~> 2.7.0"
-  - PUPPET_VERSION="~> 3.0.0"
-  - PUPPET_VERSION="~> 3.5.0"
-  - PUPPET_VERSION="~> 3.6.0"
 matrix:
   fast_finish: true
   exclude:
@@ -16,5 +16,3 @@ matrix:
       env: PUPPET_VERSION="~> 2.7.0"
     - rvm: 2.0.0
       env: PUPPET_VERSION="~> 2.7.0"
-    - rvm: 2.0.0
-      env: PUPPET_VERSION="~> 3.0.0"

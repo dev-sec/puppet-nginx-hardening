@@ -21,23 +21,26 @@ platforms:
   driver_config:
     box: opscode-centos-6.5
     box_url: http://opscode-vm-bento.s3.amazonaws.com/vagrant/virtualbox/opscode_centos-6.5_chef-provisionerless.box
-# - name: oracle-6.4
-#   driver_config:
-#     box: oracle-6.4
-#     box_url: https://storage.us2.oraclecloud.com/v1/istoilis-istoilis/vagrant/oel64-64.box
+- name: oracle-6.4
+  driver_config:
+    box: oracle-6.4
+    box_url: https://storage.us2.oraclecloud.com/v1/istoilis-istoilis/vagrant/oel64-64.box
 - name: oracle-6.5
   driver_config:
     box: oracle-6.5
     box_url: https://storage.us2.oraclecloud.com/v1/istoilis-istoilis/vagrant/oel65-64.box
-# # disable until https://github.com/jfryman/puppet-nginx/pull/531 is in the new release
-# - name: debian-6
-#   driver_config:
-#     box: debian-6
-#     box_url: https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/debian/debian-6.0.10-amd64_virtualbox.box
+- name: debian-6
+  driver_config:
+    box: debian-6
+    box_url: https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/debian/debian-6.0.10-amd64_virtualbox.box
 - name: debian-7
   driver_config:
     box: debian-7
     box_url: https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/debian/debian-7.7.0-amd64_virtualbox.box
+- name: debian-8
+  driver_config:
+    box: debian-8
+    box_url: https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/debian/debian-8.0.0-amd64_virtualbox.box
 suites:
 - name: default
   manifest: site.pp
