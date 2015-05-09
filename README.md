@@ -53,4 +53,4 @@ limitations under the License.
 
 [1]: https://forge.puppetlabs.com/hardening/nginx_hardening
 [2]: http://travis-ci.org/hardening-io/puppet-nginx-hardening
-[3]: https://gitter.im/hardening-io
+[3]: https://gitter.im/hardening-io/general
