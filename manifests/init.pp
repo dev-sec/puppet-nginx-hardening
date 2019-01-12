@@ -22,6 +22,9 @@ class nginx_hardening(
     'jfryman/nginx': {
       class{'nginx_hardening::jfryman': }
     }
+    'voxpupuli/nginx': {
+      class{'nginx_hardening::voxpupuli': }
+    }
     'none': {
       fail('You haven\'t configured a Nginx provider for hardening.')
     }
